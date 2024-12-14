@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quinho Guedez</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS -->
+</head>
+<body>
+   <h1 class="titulo2" style="text-align: center;">Estilos e animações CSS</h1>
+  <div class="grid">
+        <div class="item">
+            <h2>Borda animada</h2>
+            <div class="bot"></div>
+
+            <div class="code-box" id="code1">
+
+                -- html -- 
+
+                div class="borda"> /div
+                
+                --Feche as div corretamente no seu html!-- 
+                --Os "<->" foram removidos para a copia do código!--
+
+                --- css ---
+                .borda {
+                    position: relative;
+                    margin: auto auto;
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 1vw;
+                    width: 12vw;
+                    height: 4vw;
+                    background-color: #000000;
+                  }
+            
+                  .borda::after {
+                    border-radius: 1.2vw ;
+                    position: absolute;
+                    content: "";
+                    z-index: -1;
+                    top: -0.2vw;
+                    bottom: -0.2vw;
+                    left: -0.2vw;
+                    right: -0.2vw;
+                    background: linear-gradient(90deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    animation: giro 0.5s linear infinite;
+                  }
+
+                  @keyframes giro {
+                    0% {
+                      background: linear-gradient(0deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    }
+  
+                    10% {
+                      background: linear-gradient(36deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    }
+  
+                    20% {
+                      background: linear-gradient(72deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    }
+  
+                    30% {
+                      background: linear-gradient(108deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    }
+  
+                    40% {
+                      background: linear-gradient(144deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    }
+  
+                    50% {
+                      background: linear-gradient(180deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    }
+  
+                    60% {
+                      background: linear-gradient(216deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    }
+  
+                    70% {
+                      background: linear-gradient(252deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    }
+  
+                    80% {
+                      background: linear-gradient(288deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    }
+  
+                    90% {
+                      background: linear-gradient(324deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    }
+  
+                    100% {
+                      background: linear-gradient(360deg, #1ef70100, #1ef70100, #1ef70100, #00c013);
+                    }
+                  }
+
+                  ---fim do css ---
+            </div>
+            <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+            <button class="button" onclick="copyText('code1')">Copiar Código</button>
+        </div>
+
+
+        <div class="item">
+          <h2>Carregando</h2>
+          <div class="carregando"></div>
+
+          <div class="code-box" id="code2">
+            ---html----
+
+            div class="carregando"> /div
+
+            --Feche as div corretamente no seu html!-- 
+            --Os "<->" foram removidos para a copia do código!--
+
+            --css--
+            .carregando {
+              margin: 0 auto;
+              width: 8vw;
+              height: 8vw;
+              overflow: hidden;
+              border-radius: 50%;
+              border: 1vw solid black;
+              border-top: 1vw solid rgb(0, 255, 64);
+              animation: rotate 2.4s linear infinite;
+              animation-delay: 0s;
+            }
+      
+            @keyframes rotate {
+              from {
+                transform: rotate(0deg);
+              }
+              to {
+                transform: rotate(360deg);
+              }
+            }
+          </div>
+          <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+          <button class="button" onclick="copyText('code2')">Copiar Código</button>
+        </div>
+
+
+        <div class="item">
+          <h2>Texto Animado</h2>
+          <h1 class="textoanimado">Gradiente</h1>
+
+          <div class="code-box" id="code3">
+            --html--
+
+            h1 class="textoanimado">Gradiente /h1
+
+            --Feche as div corretamente no seu html!-- 
+            --Os "<->" foram removidos para a copia do código!--
+
+            --css--
+            .textoanimado {
+              background: linear-gradient(90deg, rgba(255, 255, 255, 0), green, rgba(255, 255, 255, 0));
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+              background-size: 450%;
+              text-transform: uppercase;
+              font-size: 3vw;
+              font-family: Arial, Helvetica, sans-serif;
+              font-weight: bold;
+              animation: textoanimado 2s linear infinite;
+              }
+     
+              @keyframes textoanimado {
+                   0% {
+                     background-position: 0%, -50%;
+                   }
+     
+                   100% {
+                     background-position: 120%, -50%;
+                   }
+              }
+          </div>
+          <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+          <button class="button" onclick="copyText('code3')">Copiar Código</button>
+        </div>
+
+
+        <div class="item">
+          <h2>Caixa com Brilho</h2>
+          <div class="caixabrilho"></div>
+
+          <div class="code-box" id="code4">
+
+            --html--
+
+            div class="caixabrilho"> /div
+
+            --Feche as div corretamente no seu html!-- 
+            --Os "<->" foram removidos para a copia do código!--
+
+            --css--
+            .caixabrilho {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: 0 auto;
+              border-radius: 1vw;
+              width: 12vw;
+              height: 6vw;
+              background-color: #00000000;
+              box-shadow: inset 0 0 0.5vw white, inset 0 0 1vw white, inset 0 0 1.5vw white;
+              }
+          </div>
+          <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+          <button class="button" onclick="copyText('code4')">Copiar Código</button>
+        </div>
+
+        <div class="item">
+          <h2>De circulo para quadrado</h2>
+          <div class="bolaquadrada"></div>
+
+          <div class="code-box" id="code5">
+            --html--
+
+            div class="bolaquadrada"> /div
+
+            --Feche as div corretamente no seu html!-- 
+            --Os "<->" foram removidos para a copia do código!--
+
+            --css--
+            .bolaquadrada {
+              margin: 0 auto;
+              width: 6vw;
+              height: 6vw;
+              overflow: hidden;
+              border-radius: 50%;
+              border: 1vw solid white;
+              animation: bolaquadrada 2.4s ease-in-out infinite;
+              animation-delay: 1s;
+              transition: border-radius;
+            }
+      
+            @keyframes bolaquadrada {
+              to {
+                transform: rotate(360deg);
+                border-radius: 0px;
+                }
+            } 
+          </div>
+          <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+          <button class="button" onclick="copyText('code5')">Copiar Código</button>
+        </div>
+
+
+        <div class="item">
+          <h2>Quadrado que some</h2>
+          <div class="quadradoquesome"></div>
+
+          <div class="code-box" id="code6">
+            --html--
+
+            div class="quadradoquesome"> /div
+
+            --Feche as div corretamente no seu html!-- 
+            --Os "<->" foram removidos para a copia do código!--
+
+            --css--
+            .quadradoquesome {
+              margin: 0 auto;
+              width: 8vw;
+              height: 8vw;
+              background-color: white;
+              border-radius: 1vw;
+              animation: quadradoquesome 3s linear infinite;
+              animation-delay: 2s;
+              }
+    
+              @keyframes quadradoquesome {
+                to {
+                  opacity: 0;
+                }
+              }
+
+          </div>
+          <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+          <button class="button" onclick="copyText('code6')">Copiar Código</button>
+        </div>
+
+
+  <div class="item">
+    <h2 style="margin-bottom: 12vw;">Rastros de sombra</h2>
+    <div class="d1"></div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+    <div class="d4"></div>
+    <div class="d5"></div>
+
+    <div class="code-box" id="code7">
+      --html--
+
+      div class="d1">/div
+      div class="d2">/div
+      div class="d3">/div
+      div class="d4">/div
+      div class="d5">/div
+
+      --Feche as div corretamente no seu html!-- 
+      --Os "<->" foram removidos para a copia do código!--
+
+      --css--
+      .d1 {
+        margin: 0 auto;
+        background-color: white;
+        position: fixed;
+        border-radius: 50%;
+        overflow: hidden;
+        max-width: 40vw;
+        width: 8vw;
+        height: 8vw;
+        opacity: 0.3;
+        animation: foto 4s ease-in-out infinite alternate;
+        animation-delay: 2.2s;  
+        }
+      
+        .d2 {
+          margin: 0 auto;
+          background-color: white;
+          position: fixed;
+          border-radius: 50%;
+          overflow: hidden;
+          max-width: 40vw;
+          width: 8vw;
+          height: 8vw;
+          opacity: 0.4;
+          animation: foto 4s ease-in-out infinite alternate;
+          animation-delay: 1.9s;  
+          }
+      
+          .d3 {
+            margin: 0 auto;
+            background-color: white;
+            position: fixed;
+            border-radius: 50%;
+            overflow: hidden;
+            max-width: 40vw;
+            width: 8vw;
+            height: 8vw;
+            opacity: 0.6;
+            animation: foto 4s ease-in-out infinite alternate;
+            animation-delay: 1.6s;  
+            }
+      
+            .d4 {
+              margin: 0 auto;
+              background-color: white;
+              position: fixed;
+              border-radius: 50%;
+              overflow: hidden;
+              max-width: 40vw;
+              width: 8vw;
+              height: 8vw;
+              opacity: 0.8;
+              animation: foto 4s ease-in-out infinite alternate;
+              animation-delay: 1.3s;
+              }
+      
+              .d5 {
+                margin: 0 auto;
+                position: fixed;
+                border-radius: 50%;
+                width: 8vw;
+                height: 8vw;
+                animation: foto 4s ease-in-out infinite alternate;
+                overflow: hidden;
+                background-color: white;
+                animation-delay: 1s;
+                }
+                @keyframes foto {
+                  to {
+                    transform: translateX(130%);
+                  }
+                }
+    </div>
+    <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+    <button class="button" onclick="copyText('code7')">Copiar Código</button>
+  </div>
+
+
+  <div class="item">
+    <h2>Borda em gradiente</h2>
+    <div class="bordagradiente"></div>
+
+    <div class="code-box" id="code8">
+      --html--
+
+      div class="bordagradiente">  /div 
+
+      --Feche as div corretamente no seu html!-- 
+      --Os "<->" foram removidos para a copia do código!--
+
+      --css--
+      .bordagradiente {
+        position: relative;
+        margin: 3vw auto;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        border-radius: 1vw;
+        width: 12vw;
+        height: 4vw;
+        background-color: rgb(36, 7, 202);
+      }
+
+      .bordagradiente::after {
+        border-radius: 1.2vw;
+        position: absolute;
+        content: "";
+        z-index: -1;
+        top: -0.4vw;
+        bottom: -0.4vw;
+        left: -0.4vw;
+        right: -0.4vw;
+        background: linear-gradient(to left bottom, #ff01e1, #02ff1b);
+      }
+    </div>
+    <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+    <button class="button" onclick="copyText('code8')">Copiar Código</button>
+  </div>
+
+  <div class="item">
+    <h2>Texto que move</h2>
+    <h3 class="textoquemoveh3"><span class="textoquemove1">T</span><span class="textoquemove2">E</span> <span class="textoquemove1">X</span><span class="textoquemove2">T</span><span class="textoquemove1">O</span></h3>
+    <div class="code-box" id="code9">
+      --html--
+
+      h3 class="textoquemoveh3"> span class="textoquemove1">T /span> span class="textoquemove2">E /span> span class="textoquemove1">X /span> span class="textoquemove2">T /span> span class="textoquemove1">O /span> /h3>
+      
+      --Feche as div corretamente no seu html!-- 
+      --Os "<->" foram removidos para a copia do código!--
+
+      --css--
+      .textoquemove1 {
+        text-transform: uppercase;
+        font-size: 3vw;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: white;
+        animation: textoquemove 1s  linear infinite alternate;
+      }
+
+      .textoquemove2 {
+        text-transform: uppercase;
+        font-size: 3vw;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        color: white;
+        animation: textoquemove 1s  linear infinite alternate-reverse;
+      }
+      
+      @keyframes textoquemove {
+        0% {
+          transform: translateY(-0.3vw);
+        }
+
+        50% {
+          transform: translateY(0vw);
+        }
+
+        100% {
+          transform: translateY(0.3vw);
+        }
+      }
+
+      .textoquemoveh3 {
+        display: flex;
+        margin: 0 auto;
+      }
+    </div>
+    <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+    <button class="button" onclick="copyText('code9')">Copiar Código</button>
+  </div>
+
+  <div class="item">
+    <h2>Giro flip</h2>
+    <div class="giroF"></div>
+  
+    <div class="code-box" id="code10">
+      --html--
+
+      div class="giroF"> /div>
+
+      --Feche as div corretamente no seu html!-- 
+      --Os "<->" foram removidos para a copia do código!--
+
+      --css--
+      
+      .giroF {
+        margin: 0 auto;
+        width: 8vw;
+        height: 8vw;
+        border-radius: 1vw;
+        background-color: white;
+        animation: giroF 2s infinite;
+      }
+
+      @keyframes giroF {
+      to {
+        transform: rotateY(360deg);
+       }
+      }
+    </div>
+    <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+    <button class="button" onclick="copyText('code10')">Copiar Código</button>
+  </div>
+
+  <div class="item">
+    <h2>Barra desfocada</h2>
+    <div class="barradesfocada"></div>
+    
+    <div class="code-box" id="code11">
+      --html--
+
+      div class="barradesfocada"> /div>
+
+      --Feche as div corretamente no seu html!-- 
+      --Os "<->" foram removidos para a copia do código!--
+
+      --css--
+      .barradesfocada {
+        filter: blur(0.8vw);
+        margin: 0 auto;
+        width: 10vw;
+        height: 1vw;
+        background: linear-gradient(90deg, blue, red, yellow);
+      }
+    </div>
+    <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+    <button class="button" onclick="copyText('code11')">Copiar Código</button>
+  </div>
+
+  <div class="item">
+    <h2>Quadrado que aumenta</h2>
+    <div class="quadradoqueaumenta"></div>
+  
+    <div class="code-box" id="code12">
+      --html--
+
+      div class="quadradoqueaumenta"> /div>
+
+      --Feche as div corretamente no seu html!-- 
+      --Os "<->" foram removidos para a copia do código!--
+  
+      --css--
+      .quadradoqueaumenta {
+        margin: 0 auto;
+        width: 6vw;
+        height: 6vw;
+        border-radius: 1vw;
+        background-color: white;
+        animation: quadradoqueaumenta 2s infinite alternate;
+      }
+
+      @keyframes quadradoqueaumenta {
+      to {
+        transform: scale(1.3);
+       }
+      }
+    </div>
+    <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+    <button class="button" onclick="copyText('code12')">Copiar Código</button>
+  </div>
+</div>
+<div class="line-section"></div>
+<h3 class="subtitulo" style="text-align: center;">Produzido por: Quinho Guedez. &#174 </h3>
+
+<!--<div class="item">
+  <h2>Carregando</h2>
+  <div class="carregando"></div>
+
+  <div class="code-box" id="code13">
+
+  </div>
+  <div class="localTexto" style="display: none;">Copiado com sucesso</div>
+  <button class="button" onclick="copyText('code13')">Copiar Código</button>
+</div>-->
+   <script>
+    function copyText(elementId) {
+        // Obtém o texto do elemento específico
+        const textToCopy = document.getElementById(elementId).innerText;
+
+        // Cria um elemento temporário para copiar o texto
+        const tempElement = document.createElement('textarea');
+        tempElement.value = textToCopy;
+        document.body.appendChild(tempElement);
+
+        // Seleciona e copia o texto
+        tempElement.select();
+        document.execCommand('copy');
+
+        // Remove o elemento temporário
+        document.body.removeChild(tempElement);
+
+        // Exibe uma notificação personalizada
+        showNotification('Código copiado com sucesso!');
+    }
+
+    // Seleciona todos os botões com a classe 'mostrarTexto'
+const botoes = document.querySelectorAll('.button');
+
+// Para cada botão, adiciona um evento de clique
+botoes.forEach((botao, index) => {
+  botao.addEventListener('click', function() {
+    // Seleciona o texto correspondente, baseado no índice do botão
+    const texto = document.querySelectorAll('.localTexto')[index];
+    
+    // Exibe o texto
+    texto.style.display = 'block';
+    
+    // Faz o texto desaparecer após 3 segundos
+    setTimeout(function() {
+      texto.style.display = 'none';
+    }, 3000); // 3 segundos
+  });
+});
+</script>
+</body>
+</html>
