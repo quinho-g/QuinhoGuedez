@@ -1,0 +1,20 @@
+Eu criei um blog pessoal, o objetivo dele é usa-lo como um diario, para mim
+falar umpouco sobre o meu dia e colocar alguns insights para vocês, 
+vou tentar manter ele sempre atualizado, e informativo, mas comenta ai, oque 
+você que que eu coloque nesse site?
+
+Gravar takes com minha voz de fundo. //
+Graver takes com motivação de fundo. //
+Gravar takes sem mais nada. //
+Gravar vlogs!
+Gravação direta! //
+Gravar
+
+conteúdos { [ Tanto para o blog quanto para os videos ]
+    motivação // Papo motivacional para pessoa ir para frente!
+    ideias // ideias que incentive as pessoas a pensarem de forma diferente!
+    pensamentos // Coisas que você pensa que queira compartilhar!
+    conexão pessoal // Coisas que varias pessoas sentem e passam por aquilo!
+    historias // Algo que ja aconteceu com você e possa ser usado como exemplo para ajudar alguem!
+}
+
