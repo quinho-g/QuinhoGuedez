@@ -205,6 +205,7 @@ html {
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
 }
 #unipassaro {
     width: 20rem;
