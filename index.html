@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H5SGL1N984"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-H5SGL1N984');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="pasini.png">
+    <link rel="icon" type="image/x-icon" href="pasini.png">
+    <title>Quinho Guedez / Blog</title>
+    <meta name="description" content="Um blog pessoal onde compartilho momentos da minha vida, pensamentos, aprendizados e histórias do meu dia a dia.">    
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body class="bodyinicio">
+    <img src="pasini.png" id="unipassaro">
+</body>
+   <script>
+      let passaro = document.getElementById('unipassaro')
+      passaro.addEventListener('animationend', ()=> {
+          window.location.href = "blog.html"
+      })
+   </script>
+</html>
