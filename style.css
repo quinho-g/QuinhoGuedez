@@ -1,0 +1,945 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Alfa+Slab+One&family=Anton&family=Dancing+Script:wght@400..700&family=Great+Vibes&family=Itim&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kaushan+Script&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Patua+One&family=Permanent+Marker&family=Pirata+One&family=Press+Start+2P&family=Sixtyfour+Convergence&family=Suez+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kaushan+Script&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Patua+One&family=Permanent+Marker&family=Pirata+One&family=Suez+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    --cabe: rgb(139, 33, 238);
+    --fundo: rgb(14, 0, 25);
+    --letra: 'Lilita One', 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+html {
+    font-size: 1.2vw;
+}
+
+.nocell {
+    display: none;
+}
+
+.roda-direitos {
+   text-align: center;
+   padding-left: 2rem;
+   padding-right: 2rem;
+   margin: 1rem;
+   margin-top: 3rem;
+}
+
+/* --- inicio do site --- */
+.bodyinicio {
+    height: 100vh; 
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+#unipassaro {
+    width: 20rem;
+    height: 20rem;
+    filter: drop-shadow(0 0 0.5rem var(--cabe));
+    animation: col 3s linear;
+}@keyframes col {
+    50% {
+       opacity: 0;
+    }
+}
+/* ----- Aviso --------*/
+.mensagem {
+    display: grid;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+    align-items: center;
+    background-color: var(--fundo);
+    border: 0.3rem solid var(--cabe);
+    padding: 1rem;
+    border-radius: 2rem;
+    pointer-events: none;
+    animation: aviso 3s linear forwards;
+    z-index: 1000;
+}.mensagem h2 {
+    text-transform: uppercase;
+    color: var(--cabe);
+    font-family: var(--letra);
+    letter-spacing: 0.3rem;
+}.mensagem img {
+    width: 6.5rem;
+    height: 6.5rem;
+    object-fit: cover;
+    object-position: top;
+    border: 0.3rem solid var(--cabe);
+    border-radius: 1.5rem;
+}.textoaviso {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}@keyframes aviso {
+    to {
+        top: 2rem;
+        opacity: 1;
+    }
+}.sumir {
+    margin: 0 auto;
+    top: 2rem;
+    opacity: 1;
+    animation: sumir 3s linear forwards;
+    z-index: 1000;
+}@keyframes sumir {
+    to {
+        top: 0;
+        opacity: 0;
+    }
+}
+/* --- area patrocinio --- */
+.cta-patrocinio {
+    width: 100%;
+    height: 5rem;
+    border: 0.3rem solid var(--cabe);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    transition: 2s;
+}.cta-patrocinio:hover {
+    border: 0.3rem solid aqua;
+}
+.cta-patrocinio2 {
+    margin: 0 auto;
+    width: 80%;
+    height: 5rem;
+    border: 0.3rem solid var(--cabe);
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    transition: 2s;
+}.cta-patrocinio2:hover {
+    border: 0.3rem solid aqua;
+}
+.nome-patrocinio {
+    margin-left: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    letter-spacing: 0.4rem;
+    font-family: var(--letra);
+    color: var(--cabe);
+}
+.bene-patrocinio {
+    margin-left: 6rem;
+    margin-right: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 75%;
+}.bene-patrocinio h3 {
+    text-transform: uppercase;
+    font-family: var(--letra);
+    letter-spacing: 0.3rem;
+    color: var(--cabe);
+}
+.separa-patrocionio {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-bottom: 3rem;
+}
+
+.funci-patro {
+    display: flex;
+    flex-direction: column;
+    gap: 3.4rem;
+    margin-right: 3rem;
+    max-width: 75%;
+    margin-left: 6rem;
+    margin-bottom: 4.6rem;
+}.bold {
+    font-weight: bold;
+    color: var(--cabe);
+}
+
+
+/* --- código de ética --- */
+.entrada-tema {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    padding-left: 6rem;
+    padding-right: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}.entrada-tema img {
+    width: 15rem;
+    height: 15rem;
+    filter: drop-shadow(0 0 1rem var(--cabe));
+    animation: sobedesce 8s linear infinite;
+}@keyframes sobedesce {
+    50% {
+        transform: translateY(-1rem);
+    }
+}.texto-tema {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}.texto-tema  h1 {
+    letter-spacing: 0.4rem;
+    color: var(--cabe);
+    font-family: var(--letra);
+}.texto-regras {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    max-width: 80%;
+    padding-left: 6rem;
+    padding-bottom: 4rem;
+    padding-top: 3rem;
+}
+.texto-regras h2 {
+    font-size: 1.8rem;
+    letter-spacing: 0.3rem;
+    color: white;
+    font-family: var(--letra);
+}.texto-regras h3 {
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- Metas --- */
+.titulo-meta {
+    text-align: center;
+    font-family: var(--letra);
+    color: var(--cabe);
+    letter-spacing: 0.4rem;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+.separa-metas {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.6rem;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}.meta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    align-items: center;
+    width: 90%;
+    height: auto;
+    background-color: var(--fundo);
+    border-radius: 1.5rem;
+    border: 0.5rem solid var(--cabe);
+    padding: 1.5rem;
+    font-family: var(--letra);
+    text-transform: uppercase;
+}.meta h3 {
+    color: var(--cabe);
+    letter-spacing: 0.2rem;
+}.meta p {
+    color: rgb(7, 255, 7);
+}
+.porcentagem-total {
+    height: 1.4rem;
+    width: 80%;
+    position: relative;
+    background-color: rgb(216, 216, 216);
+    border-radius: 1rem;
+}.porcentagem {
+    z-index: 111;
+    position: absolute;
+    background-color: rgb(7, 255, 7);
+    height: 100%;
+    width: 0%;
+    border-radius: 1rem;
+    animation: barrameta 3s ease-out forwards;
+}@keyframes barrameta {
+    to {
+        width: calc(var(--i) * 1%);
+    }
+}
+
+
+/* ------- BLOG ------- */
+
+body {
+    color: white;
+    background-color: var(--fundo);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 2.6rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* --------------*/
+.barra-fim {
+    width: 90%;
+    height: 0.5rem;
+    background: linear-gradient(90deg, var(--cabe), aqua, var(--cabe));
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+/* cabeçalho */
+.cabe {
+    background-color: var(--cabe);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3%;
+    padding-right: 3%;
+}.cabe img {
+    width: 6rem;
+}
+
+.videos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    top: 2.8rem;
+    right: 5rem;
+    margin: 2rem;
+}.videos h3 {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+}.videos h3:hover {
+    transform: scale(1.25);
+}
+.videos i {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.5s;
+    color: white;
+}.videos i:hover {
+    transform: scale(1.25);
+}.videos img {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: 0.5s;
+}.videos img:hover {
+    transform: scale(1.25);
+}
+#chamasoc {
+    transition: 0.5s;
+}
+#chamasoc:hover {
+    transform: scale(1.25);
+}
+
+#teste-redes {
+    position: fixed;
+    border: 0.3rem solid var(--cabe);
+    border-bottom:  none;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    background-color: var(--fundo);
+    bottom: 0;
+    left: 5%;
+    width: 90%;
+    height: 0%;
+    transition: height 3s ease-out;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: top;
+    align-items: center;
+    overflow: hidden;
+}
+.social {
+   flex: none;
+   color: white;
+   font-family: var(--letra);
+   letter-spacing: 0.4rem;
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}.social i {
+    font-size: 2rem;
+    color: var(--cabe);
+}
+
+
+/* --- RECEITAS --- */
+::marker {
+    display: flex;
+    color: var(--cabe);
+    align-items: start;
+}
+.nome-receita {
+    font-family: var(--letra);
+    color: var(--cabe);
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2.4rem;
+}
+.ingredientes-img {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 4rem;
+}.ingredientes-img img {
+    width: 40%;
+    height: 20%;
+    border-radius: 2rem;
+    border: 0.3rem solid var(--cabe);
+}
+.ingredientes {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}.ingredientes h3 {
+    font-family: var(--letra);
+    color: var(--cabe);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}.ingredientes ul {
+    transform: translateX(1rem);
+}.ingredientes li {
+    font-size: 1.4rem;
+}
+.preparo-receita {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 4rem;
+}.preparo-receita h3 {
+    font-family: var(--letra);
+    color: var(--cabe);
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}.info-nutri {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-bottom: 4rem;
+}.info-nutri h3 {
+    font-size: 1.8rem;
+    font-family: var(--letra);
+    color: var(--cabe);
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+}.tabela-nutri {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}.ex {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}.macro {
+    text-transform: uppercase;
+    color: var(--cabe);
+}
+.fim-receita {
+    width: 90%;
+    height: 0.5rem;
+    background: linear-gradient(to left, var(--fundo), var(--cabe),  var(--fundo));
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/* Inicio do blog */
+
+.apresentaçao {
+    display: grid;
+    grid-template-columns: repeat(2,auto);  
+    align-items: top; 
+    gap: 3rem;
+    padding-right: 8rem;
+    padding-left: 6rem;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}.apresentaçao img {
+    width: 15rem;
+    height: 20rem;
+    border-radius: 1.4rem;
+    object-fit: cover;
+    object-position: top right;
+    border: 0.2rem solid var(--cabe);
+}.texto-apresentaçao {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}.texto-apresentaçao h1 {
+    letter-spacing: 0.4rem;
+    font-family: var(--letra);
+    color: var(--cabe);
+}
+
+/* área para separar divs dos dispositovos */
+.tipo-patrocinio-com {
+    display: flex;
+    cursor: pointer;
+    gap: 5%;
+}
+
+.tipo-patrocinio-table {
+    display: none;
+    padding-right: 6rem;
+    padding-left: 6rem;
+    gap: 5%;
+}
+
+/* Divs de patrocinio e anuncio */
+.patrocinio {
+    padding: 1.4rem;
+    border: 0.3rem solid var(--cabe);
+    transition: 2s;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 70%;
+}
+.patrocinio:hover {
+    border: 0.3rem solid aqua;
+}
+.patrocinio2 {
+    border: 0.3rem solid var(--cabe);
+    transition: 2s;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 25%;
+}
+.patrocinio2 img {
+    width: 5rem;
+    height: 5rem;
+    border: none;
+}
+.patrocinio2:hover {
+    border: 0.3rem solid aqua;
+}
+
+/* area de estilização para textos */
+.destaque {
+    color: var(--cabe);
+}
+.texto-dia {
+    max-width: 70%;
+    padding-left: 6rem;
+    padding-bottom: 4rem;
+    padding-top: 3rem;
+}
+.texto-dia h2 {
+    letter-spacing: 0.4rem;
+    color: var(--cabe);
+    font-family: var(--letra);
+}.texto-dia h3 {
+    margin-bottom: 2rem;
+}.subtitulo {
+    text-transform: uppercase;
+    font-family: var(--letra);
+    color: var(--cabe);
+    letter-spacing: 0.3rem;
+    margin-top: 3rem;
+}
+
+/* respostas para interação */
+.resposta {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.res {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    border: 0.3rem solid var(--cabe);
+    font-size: 1.3rem;
+    transition: 2s;
+}.res:hover {
+    border: 0.3rem solid aqua;
+}
+
+.res-cliente {
+    color:  aqua;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+}
+
+
+
+/* div expecifica para oferecer meu serviço */
+.anunciopro {
+    text-transform: uppercase;
+    display: flex;
+    padding: 1rem;
+    margin-top: 3rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.6rem;
+    border: 0.3rem solid var(--cabe);
+    cursor: pointer;
+    transition: 2s;
+}.anunciopro:hover {
+    border: 0.3rem solid aqua;
+}
+.anunciopro h3 {
+    margin: auto;
+}
+/* ------------ */
+
+/* Área de patrocinadores */
+.cta-covite {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 90%;
+    height: auto;
+    gap: 3rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 0.3rem solid var(--cabe);
+    border-radius: 1.6rem;
+    padding: 1rem;
+    margin: 3rem auto;
+    margin-top: 0;
+}.cta-covite img {
+    width: 5rem;
+    height: 5rem;
+}
+/* roda pé */
+.roda {
+    background-color: var(--cabe);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* -- Responsividade para dispositivos moveis -- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    html {
+        font-size: 1.8vw;
+    }
+    .videos i:hover {
+        transform: scale(1);
+    }
+    .videos h3:hover {
+        transform: scale(1);
+    }
+    .videos img:hover {
+        transform: scale(1);
+    }
+    #chamasoc:hover {
+        transform: scale(1);
+    }
+
+    .tipo-patrocinio-com {
+        display: none;
+    }
+    .tipo-patrocinio-table {
+        display: flex;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    } 
+
+    .apresentaçao {
+        display: grid;
+        grid-template-columns: repeat(2,auto);  
+        align-items: top; 
+        gap: 3rem;
+        padding-right: 4rem;
+        padding-left: 6rem;
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+    }.apresentaçao img {
+        height: 18.5rem;
+    }
+
+    .texto-dia {
+        max-width: 85%;
+    }
+
+    /* ----- código de ética ---- */
+    .entrada-tema {
+        gap: 3rem;
+        padding-left: 5rem;
+        padding-right: 3rem;
+        padding-top: 5rem;
+    }.entrada-tema img {
+        width: 10rem;
+        height: 10rem;
+    }.texto-regras {
+        gap: 5rem;
+        max-width: 90%;
+        padding-left: 4rem;
+        padding-bottom: 4rem;
+        padding-top: 3rem;
+    }
+
+    /* --- Metas --- */
+    .separa-metas {
+        gap: 1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+        /* --- Aviso -----*/
+    .mensagem {
+       width: 60%;
+}
+/* --- Livors --- */
+.sec-livros {
+    padding-left: 0;
+    padding-right: 0;
+}
+.inicio-dos-livros {
+    flex-direction: column;
+
+}
+.inicial-livros h3 {
+    margin: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}.inicial-livros p {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+/* --- RECEITAS --- */
+.nome-receita {
+    letter-spacing: 0.3rem;
+    margin-top: 4rem;
+    margin-bottom: 2.4rem;
+}
+.ingredientes-img {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}.ingredientes-img img {
+    width: 50%;
+    height: 25%;
+}
+.preparo-receita {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}.info-nutri {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}.tabela-nutri {
+    width: 70%;
+}
+}
+
+
+
+@media (max-width: 767px) {
+    html {
+        font-size: 2.7vw;
+    }
+    .nocell {
+        display: block;
+    }
+    .videos i:hover {
+        transform: scale(1);
+    }
+    .videos h3:hover {
+        transform: scale(1);
+    }
+    .videos img:hover {
+        transform: scale(1);
+    }
+    #chamasoc:hover {
+    transform: scale(1);
+    }
+    .apresentaçao {
+        display: grid;
+        grid-template-columns: auto;  
+        justify-content: center;
+        place-items: center;
+    }.apresentaçao img {
+        width: 30rem;
+        height: 20rem;
+    }.texto-apresentaçao {
+        text-align: center;
+    }
+    .texto-dia {
+        max-width: 100%;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        padding-top: 3rem;
+    }
+
+    .tipo-patrocinio-com {
+        display: none;
+    }
+    .tipo-patrocinio-table {
+        display: flex;
+        padding: 3rem;
+        padding-bottom: 2rem;
+        padding-top: 0;
+    } 
+
+        /* ----- código de ética ---- */
+        .entrada-tema {
+            flex-direction: column;
+            gap: 3rem;
+            padding-left: 5rem;
+            padding-right: 3rem;
+            padding-top: 5rem;
+        }.entrada-tema img {
+            width: 15rem;
+            height: 15rem;
+        }
+
+        .texto-regras {
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+            max-width: 90%;
+            padding-left: 4.5rem;
+        }
+        /* área de patrocinio */
+        .nome-patrocinio {
+            margin-left: 4.4rem;
+        }
+        .bene-patrocinio {
+            margin-left: 4.4rem;
+        }
+        .funci-patro {
+            margin-left: 4.4rem;
+        }
+
+        /* --- Metas --- */
+        .separa-metas {
+            grid-template-columns: auto;
+            place-items: center;
+            margin-top: 3rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+            }
+    /* --- Aviso -----*/
+    .mensagem {
+        width: 80%;
+        }
+    /* --- Livros --- */
+    .sec-livros {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .inicio-dos-livros {
+        flex-direction: column;
+    }
+    .inicial-livros h3 {
+        margin: 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }.inicial-livros p {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+/* --- RECEITAS --- */
+.ingredientes-img {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}.ingredientes-img img {
+    width: 100%;
+    height: 50%;
+    order: 1;
+}.ingredientes {
+    order: 2;
+}
+.preparo-receita {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}.info-nutri {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}.tabela-nutri {
+    width: 100%;
+}
+
+} 
+
+
+
+
+
