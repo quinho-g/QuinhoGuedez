@@ -975,7 +975,7 @@ a {
         .entrada-tema {
             flex-direction: column;
             gap: 3rem;
-            padding-left: 5rem;
+            padding-left: 3rem;
             padding-right: 3rem;
             padding-top: 5rem;
         }.entrada-tema img {
